@@ -27,8 +27,7 @@ export class CoursesController {
     //rotas de atualização
     @Patch(':id')
     update(@Param('id') id:string, @Body() updateCourseDto: UpdateCourseDto){
-        console.log(UpdateCourseDto)
-        return this.coursesService.update(id, UpdateCourseDto);
+        return this.coursesService.update(id, updateCourseDto);
     }
     @Delete(':id')
     //deletar curso com id específico em Param(id)

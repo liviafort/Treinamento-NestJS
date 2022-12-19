@@ -14,7 +14,10 @@ import { CoursesModule } from './courses/courses.module';
     password: 'sttp2022', 
     database: 'postgres', //banco de dados padrão - serviço
     autoLoadEntities: true, //carregamento automatico de entidades
-    synchronize: true, //vai criar automaticamente as tabelas no banco de dados
+    // não usar synchronize: true ---> perde todas as alterações, informações NÃO É SEGURO!!!!
+    //USAR MIGRAÇÃO!
+    //------>migração é apenas um único arquivo com consultas sql para atualizar um esquema de banco de dados 
+    //e aplicar novas alterações a um banco de dados existente
   })],
   controllers: [AppController],
   providers: [AppService],
