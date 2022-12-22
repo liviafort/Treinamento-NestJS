@@ -20,5 +20,3 @@ describe('AppController', () => {
     });
   });
 });
-
-.spec.ts .test.ts
